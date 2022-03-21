@@ -60,7 +60,7 @@ export default function Squares() {
               id={id}
               key={id}
               className={`square ${getClassName(id)}`}
-              onClick={markActive(id)}
+              onClick={() => markActive(id)}
             >
             </div>
           )
