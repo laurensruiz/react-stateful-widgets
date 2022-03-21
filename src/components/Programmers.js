@@ -11,7 +11,7 @@ We can only feature one awesome programmer at a time.
 Find comments below to help you along.
 */
 
-import { element } from 'prop-types';
+
 import React, {useState} from 'react';
 
 // Use this variable ONLY to initialize a slice of state!
@@ -38,13 +38,22 @@ export default function Programmers() {
     // The beauty of closures is that we can "see" both slices of state from this region
     // of the program, without needing to inject the information through arguments.
 
-    
+  
     for (let i = 0 ; i < programmers.length; i++) {
       if (programmers[i].id === featured) {
         return programmers[i].name;
       }
-    }
+    } 
 
+    /* takes in the commas into the text! 
+    const listA = programmers.map( i => {
+      if (i.id === featured) {
+        return i.name;
+      }
+    })
+
+    return listA
+*/
   };
 
   const style = {
